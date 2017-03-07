@@ -99,7 +99,7 @@ interval = 25
 mount-0 = /
 
 format-mounted-underline = #fdf6e3
-label-mounted = "%{F#dfdfdf}%{F-} %used% of %total%" 
+label-mounted = "%{F#dfdfdf}%{F-} %used% of %total% Used" 
 label-unmounted = %mountpoint%: not mounted
 
 
