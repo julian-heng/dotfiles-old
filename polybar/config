@@ -193,7 +193,7 @@ format-underline = #fdf6e3
 label = MEM: %mb_used%
 
 bar-used-indicator =
-bar-used-width = 6
+bar-used-width = 12
 bar-used-foreground-0 = #55aa55
 bar-used-foreground-1 = #557755
 bar-used-foreground-2 = #f5a70a
@@ -259,12 +259,14 @@ format-volume = <ramp-volume> <label-volume>
 label-volume = %percentage%%
 label-volume-foreground = ${root.foreground}
 
-format-muted-prefix = " "
-format-muted-foreground = ${colors.foreground-alt}
-label-muted = 
+format-muted-underline = #fdf6e3
+format-muted-foreground = ${colors.foreground}
+format-muted =  <label-muted>
+label-muted = 0%
 
-ramp-volume-0 = 
-ramp-volume-1 = 
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
 
 format-volume-underline = #fdf6e3
 
@@ -280,12 +282,12 @@ format-charging-underline = #fdf6e3
 label-charging= %percentage%% | %time%
 
 format-discharging = <ramp-capacity> <label-discharging>
-format-discharging-underline = ${self.format-charging-underline}
+format-discharging-underline = #fdf6e3
 label-discharging= %percentage%% | %time%
 
-format-full-prefix = " "
-format-full-prefix-foreground = ${colors.foreground-alt}
-format-full-underline = ${self.format-charging-underline}
+format-full = <ramp-capacity> <label-full>
+format-full-underline = #fdf6e3
+label-full= %percentage%%
 
 ramp-capacity-0 = %{F#dfdfdf} 
 ramp-capacity-1 = %{F#dfdfdf}
@@ -307,7 +309,7 @@ animation-charging-framerate = 1024
 [module/temperature]
 type = internal/temperature
 thermal-zone = 0
-warn-temperature = 60
+warn-temperature = 75
 
 format = <ramp> <label>
 format-underline = #fdf6e3
