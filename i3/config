@@ -96,6 +96,8 @@ bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
+set $workspace1 "1  urxvtc"
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
@@ -146,5 +148,8 @@ bindsym XF86AudioStop exec cmus-remote -s
 
 # autostart commands
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec --no-startup-id compton -D 5
+exec --no-startup-id compton -D 5 -I 0.05 -O 0.02
 exec_always feh --bg-scale --bg-fill ~/.wallpaper.png
+
+exec --no-startup-id rxvt -e cmus
+exec --no-startup-id rxvt -e vis
